@@ -20,14 +20,21 @@ public class FirstServlet extends HttpServlet{
 		
 		req.setAttribute("result", result);
 		
-		if(num1 > num2) {			
+		// Se o primeiro número inserido for maior que o segundo, o FirstServlet chama o SecondServlet 
+		if(num1 > num2) {
 			RequestDispatcher rd = req.getRequestDispatcher("/servlet_add2");
 			rd.forward(req, res);
 		}
 		
+		
+		// Se ambos os campos forem iguais, o FirstServlet chama o ThirdServlet
+		if(num1 == num2) {
+			res.sendRedirect("servlet_add3?result="+result);
+		}
+		
 		PrintWriter out = res.getWriter();
 		
-		out.println("The result is " + result + " in FirstServlet.");
+		out.println("The Result is " + result + " in FirstServlet.");
 		
 	}
 	

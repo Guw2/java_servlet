@@ -11,6 +11,11 @@
 	<servlet-class>com.lorian.SecondServlet</servlet-class>
   </servlet>
   
+  <servlet>
+	<servlet-name>servletthree</servlet-name>
+	<servlet-class>com.lorian.ThirdServlet</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
 	<servlet-name>servlet</servlet-name>
 	<url-pattern>/servlet_add</url-pattern>
@@ -19,6 +24,11 @@
   <servlet-mapping>
 	<servlet-name>servlettwo</servlet-name>
 	<url-pattern>/servlet_add2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+	<servlet-name>servletthree</servlet-name>
+	<url-pattern>/servlet_add3</url-pattern>
   </servlet-mapping>
   
 </web-app>
