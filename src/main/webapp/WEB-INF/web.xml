@@ -9,6 +9,11 @@
 <servlet>
 	<servlet-name>calculo</servlet-name>
 	<servlet-class>com.lorian.CalculoServlet</servlet-class>
+	
+	<init-param>
+		<param-name>hello</param-name>
+		<param-value>Hello, World!</param-value>
+	</init-param>
 </servlet>
 
 <servlet>

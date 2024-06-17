@@ -3,6 +3,7 @@ package com.lorian;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
@@ -36,10 +37,14 @@ public class CalculoServlet extends HttpServlet{
 		}
 		
 		ServletContext ctx = getServletContext();
+		ServletConfig cfg = getServletConfig();
 		float pi = Float.parseFloat(ctx.getInitParameter("pi"));
+		
+		String hello = cfg.getInitParameter("hello");
 		
 		out.println(message);
 		out.println("The pi value is " + pi);
+		out.println(hello);
 	}
 	
 }
