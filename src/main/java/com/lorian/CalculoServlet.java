@@ -5,12 +5,15 @@ import java.io.PrintWriter;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+
+@WebServlet("/servlet_add")
 public class CalculoServlet extends HttpServlet{
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
@@ -35,16 +38,5 @@ public class CalculoServlet extends HttpServlet{
 				message = c.getValue();				
 			}
 		}
-		
-		ServletContext ctx = getServletContext();
-		ServletConfig cfg = getServletConfig();
-		float pi = Float.parseFloat(ctx.getInitParameter("pi"));
-		
-		String hello = cfg.getInitParameter("hello");
-		
-		out.println(message);
-		out.println("The pi value is " + pi);
-		out.println(hello);
 	}
-	
 }
