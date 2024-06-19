@@ -1,6 +1,9 @@
-<%@page import="java.io.PrintWriter"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
+<%@ include file="header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +17,10 @@
 		font-size: 40px;
 		text-align: center;
 	}
+	
+	.main_div{
+		color: blue;
+	}
 
 </style>
 
@@ -25,16 +32,12 @@
 	<hr>
 
 	<div class="main_div">
-		<% 
-		
-		int num1 = Integer.parseInt(request.getParameter("num1"));
-		int num2 = Integer.parseInt(request.getParameter("num2"));
-		
-		int result = num1 + num2;
-		
-		out.println("The Result is " + result);
-		
+	
+		<%!
+			int coiso = 27;
 		%>
+	
+		My Favourite Number is <% out.println(coiso2); %>
 	</div>
 	
 </body>
