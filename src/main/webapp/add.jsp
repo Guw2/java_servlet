@@ -4,6 +4,7 @@
     pageEncoding="ISO-8859-1"%>
 
 <%@ include file="header.jsp" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,17 +28,21 @@
 </head>
 <body>
 
-	<h2 style="text-align: center;">Resultado</h2>
-
-	<hr>
-
 	<div class="main_div">
 	
-		<%!
-			int coiso = 27;
-		%>
+		<%! int res; %>
 	
-		My Favourite Number is <% out.println(coiso2); %>
+		<%
+			
+		int num1 = Integer.parseInt(request.getParameter("num1"));
+		int num2 = Integer.parseInt(request.getParameter("num2"));
+		
+		res = num1 + num2;
+		
+		%>
+		
+		The result is <% out.println(res); %>
+		
 	</div>
 	
 </body>

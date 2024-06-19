@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<%! int coiso2 = 24; %>
-	
-	<h1>trepnocrebesdoprede</h1>
+	<h2>JSP Header</h2>
+	<hr>
 </body>
 </html>
