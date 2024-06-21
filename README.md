@@ -1,1 +1,3 @@
-Não é um projeto definitivo, apenas um teste.
+#Routine Manager (Gerenciador de Rotina)
+
+Um projeto teste envolvendo Servlet, JSP e JDBC.
