@@ -21,11 +21,16 @@
 		</style>
 	</head>
 	<body style="font-family: arial; font-size: 20px;">
-		<h1 class="title">Curso Servlet e JSP</h1>
+		<h1 class="title">Routine Manager</h1>
 		
-		<form action="add.jsp" method="get" class="form">
-			First Number : <input type="text" name="num1"><br>
-			Second Number : <input type="text" name="num2"><br>
+		<form action="main.jsp" method="get" class="form">
+			User : <input type="text" name="user"><br>
+			Pass : <input type="text" name="pass"><br>
+			Show : <select name="info">
+			<option value="title">Titles</option>
+			<option value="message">Messages</option>
+			<option value="owner_id">Owners(ID)</option>
+			</select><br>
 			
 			<input type="submit" id="button">
 		</form>
