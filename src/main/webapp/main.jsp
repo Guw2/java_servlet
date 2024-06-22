@@ -29,7 +29,7 @@
 <body>
 	<div class="main_div">
 	
-	${mesaje}
+		${mesaje}
 		<%! 
 		Connection con = null; 	
 		Statement st = null;
