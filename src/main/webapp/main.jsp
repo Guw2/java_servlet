@@ -27,9 +27,9 @@
 
 </head>
 <body>
-
 	<div class="main_div">
 	
+	${mesaje}
 		<%! 
 		Connection con = null; 	
 		Statement st = null;
