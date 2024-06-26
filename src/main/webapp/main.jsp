@@ -6,6 +6,8 @@
 <%@ include file="header.jsp" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="k" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jstl/sql" %>
 
 <!DOCTYPE html>
 <html>
@@ -29,8 +31,7 @@
 
 </head>
 <body>
-
-	<c:out value="Hello, World!"/>
+	
 	<div class="main_div">
 	
 		${mesaje}

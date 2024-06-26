@@ -19,4 +19,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <filter>
+    <display-name>FirstFilter</display-name>
+    <filter-name>FirstFilter</filter-name>
+    <filter-class>com.lorian.FirstFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FirstFilter</filter-name>
+    <url-pattern>/FirstFilter</url-pattern>
+  </filter-mapping>
 </web-app>
