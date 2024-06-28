@@ -2,7 +2,6 @@ package com.lorian;
 
 import jakarta.servlet.Filter;
 import jakarta.servlet.annotation.WebFilter;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpFilter;
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -14,16 +13,25 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 @WebFilter("/add")
-public class FirstFilter extends HttpFilter implements Filter {
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+public class FirstFilter implements Filter {
+	
+	public void init(FilterConfig config) throws ServletException {
 		
-		HttpServletRequest req = (HttpServletRequest) request;
+	}
+	public void destroy() {
+		
+	}
+
+	@Override
+	public void doFilter(jakarta.servlet.ServletRequest request, jakarta.servlet.ServletResponse response,
+			jakarta.servlet.FilterChain chain) throws IOException, jakarta.servlet.ServletException {
+		
 		String user = request.getParameter("user");
 		
-		if(user.equals("")) {
-			response.getWriter().println("Coisado");
-		}else {
+		if(!user.isBlank())
 			chain.doFilter(request, response);
-		}
+		else
+			response.getWriter().println("Deu cu.");
+		
 	}
 }
